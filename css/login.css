@@ -1,0 +1,160 @@
+:root {
+  --primary-fonts: "Modern Warfare", sans-serif;
+  --secondary-font: "Poppins", sans-serif;
+  --primary-color: #0e2954;
+  --secondary-color: #1f6e8c;
+  --support-color-1: #000;
+  --support-color-2: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: var(--primary-fonts);
+}
+
+.login-content {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+}
+
+.login-content .left-side {
+  width: 30%;
+  z-index: 100;
+  width: 549px;
+  height: 963px;
+  position: relative;
+  background-image: url(/images/login-and-signup/LoginImage.png);
+}
+
+.login-content .left-side span {
+  position: absolute;
+  top: 5%;
+  left: 12%;
+
+  color: var(--support-color-2);
+  font-size: 50px;
+}
+
+.login-content .right-side p,
+.login-content .right-side a span,
+.login-content .right-side .login-with span,
+.login-content .right-side .login-form input,
+.login-content
+  .right-side
+  .login-form
+  .remember-me-and-forgot-password
+  .remember-me
+  label,
+.login-content
+  .right-side
+  .login-form
+  .remember-me-and-forgot-password
+  .forgot-password
+  a,
+.login-content .right-side span,
+.login-content .right-side span a {
+  font-family: var(--secondary-font);
+  font-size: 12px;
+}
+
+.login-content .right-side {
+  width: 70%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-content .right-side .right-side-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.login-content .right-side .social-media-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.login-content .right-side .social-media-login .socmed-login {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.login-content .right-side .social-media-login .google-login {
+  background: var(--support-color-2);
+  color: var(--support-color-1);
+}
+
+.login-content .right-side .social-media-login .facebook-login {
+  background: #3b5998;
+  color: var(--support-color-2);
+}
+
+.login-content .right-side .login-with {
+  display: flex;
+  justify-content: center;
+}
+
+.login-content .right-side .login-form input {
+  padding: 8px;
+  outline: none;
+  border: 1px solid #d9d9d9;
+  color: #d9d9d9;
+}
+
+.login-content .right-side .login-form {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  width: 450px;
+}
+
+.login-content
+  .right-side
+  .login-form
+  .remember-me-and-forgot-password
+  .remember-me {
+  display: flex;
+  gap: 5px;
+}
+
+.login-content .right-side .login-form .remember-me-and-forgot-password {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-content .right-side .login-form .button {
+  display: flex;
+  justify-content: center;
+}
+
+.login-content .right-side .login-form .form-loginBtn {
+  background: var(--secondary-color);
+  font-family: var(--primary-fonts);
+  border: var(--secondary-color);
+  color: #fff;
+  padding: 12px 32px;
+
+  cursor: pointer;
+}
+
+.login-content .right-side span {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.login-content .right-side .dont-have-account {
+  display: flex;
+  justify-content: center;
+}

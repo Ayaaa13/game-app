@@ -1,0 +1,544 @@
+:root {
+  --primary-fonts: "Modern Warfare", sans-serif;
+  --secondary-font: "Poppins", sans-serif;
+  --primary-color: #0e2954;
+  --secondary-color: #1f6e8c;
+  --support-color-1: #000;
+  --support-color-2: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: var(--primary-fonts);
+}
+
+header,
+nav,
+section {
+  display: flex;
+}
+
+section,
+footer {
+  padding: 0px 150px;
+}
+
+header {
+  justify-content: space-between;
+  padding: 25px 150px;
+  align-items: center;
+
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+nav {
+  gap: 30px;
+  align-items: center;
+}
+
+header .logo,
+.play-now-modal .logo {
+  font-size: 32px;
+  color: var(--primary-color);
+}
+
+header nav a {
+  color: var(--support-color-1);
+  font-size: 12px;
+}
+
+.play-now-button {
+  background: var(--secondary-color);
+  font-family: var(--primary-fonts);
+  border: var(--secondary-color);
+  color: #fff;
+  padding: 12px 24px;
+
+  cursor: pointer;
+}
+
+.play-now-modal {
+  display: none;
+}
+
+.play-now-modal.visible {
+  display: flex;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--support-color-2);
+  z-index: 100;
+}
+
+.play-now-overlay {
+  display: none;
+}
+
+.play-now-overlay.visible {
+  display: flex;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: rgba(255, 255, 255, 0.5);
+  filter: blur(100px);
+
+  z-index: 5;
+}
+
+.account-setup,
+.logo-and-closeBtn,
+.setup-title-and-setup-buttons,
+.account-setup-buttons,
+.account-setup-buttons .signup,
+.account-setup-buttons .login {
+  display: flex;
+}
+
+.account-setup {
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  width: 500px;
+}
+
+.logo-and-closeBtn {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-button {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.setup-title-and-setup-buttons {
+  flex-direction: column;
+  gap: 25px;
+}
+
+.setup-title {
+  font-size: 16px;
+  text-align: center;
+}
+
+.account-setup-buttons {
+  gap: 50px;
+  justify-content: center;
+}
+
+.account-setup-buttons .signup .signup-title,
+.account-setup-buttons .login .login-title {
+  font-size: 10px;
+  font-family: var(--secondary-font);
+}
+
+.account-setup-buttons .signup,
+.account-setup-buttons .login {
+  flex-direction: column;
+  text-align: center;
+  gap: 5px;
+}
+
+.account-setup-buttons .signup a,
+.account-setup-buttons .login a {
+  width: 200px;
+  padding: 12px 24px;
+}
+
+.account-setup-buttons .signup a {
+  background: none;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.account-setup-buttons .signup a:hover {
+  background: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  color: var(--support-color-2);
+}
+
+.account-setup-buttons .login a {
+  background: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  color: var(--support-color-2);
+}
+
+.account-setup-buttons .login a:hover {
+  background: none;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.section-1 .section-1-content h1,
+.section-2 .section-2-content h1,
+.section-3 .section-3-content h1,
+.section-4 .section-4-content h1,
+.section-5 .section-5-content h1 {
+  font-size: 50px;
+  color: var(--primary-color);
+}
+
+/* WELCOME PAGE SECTION ONE(1) */
+.section-1 {
+  padding: 100px 0px;
+  border-bottom: 2px solid #d9d9d9;
+}
+
+.section-1,
+.section-1 .logo-and-play-free {
+  display: flex;
+}
+
+.section-1 {
+  justify-content: center;
+}
+
+.section-1 .logo-and-play-free {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.section-1 .logo {
+  font-size: 100px;
+  color: var(--primary-color);
+
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.section-1 .play-free {
+  background: var(--secondary-color);
+  font-family: var(--primary-fonts);
+  border: var(--secondary-color);
+  color: #fff;
+  padding: 12px 24px;
+
+  cursor: pointer;
+}
+
+/* .section-1 .arithmethic-symbol {
+  padding: 8px 16px;
+  font-family: var(--secondary-font);
+
+  position: absolute;
+} */
+
+/* WELCOME PAGE SECTION TWO(2) and WELCOME PAGE SECTION THREE(3) */
+.section-2 .section-2-content,
+.section-3 .section-3-content {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  border-bottom: 2px solid #d9d9d9;
+}
+
+.section-2 .section-2-content {
+  border-left: 2px solid #d9d9d9;
+}
+
+.section-3 .section-3-content {
+  border-right: 2px solid #d9d9d9;
+}
+.section-2 .section-2-content .left-side,
+.section-2 .section-2-content .welcome,
+.section-3 .section-3-content .right-side,
+.section-3 .section-3-content .welcome {
+  display: flex;
+  flex-direction: column;
+}
+.section-2 .section-2-content .left-side,
+.section-3 .section-3-content .right-side {
+  gap: 15px;
+}
+
+.section-2 .section-2-content .welcome,
+.section-3 .section-3-content .welcome {
+  gap: 10px;
+}
+
+.section-2 h1,
+.section-3 h1 {
+  color: var(--primary-color);
+}
+
+.section-2 p,
+.section-3 p {
+  font-family: var(--secondary-font);
+}
+
+.section-2 .learnMoreBtn {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 8px 16px;
+  background: var(--support-color-2);
+  border: none;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  cursor: pointer;
+}
+
+.section-3 .viewGameBtn {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  background: var(--secondary-color);
+  font-family: var(--primary-fonts);
+  border: var(--secondary-color);
+  color: var(--support-color-2);
+  padding: 12px 24px;
+  width: 140px;
+
+  cursor: pointer;
+}
+
+/* WELCOME PAGE SECTION FOUR(4)*/
+.section-4 .section-4-content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  align-items: center;
+  padding: 100px;
+  border-bottom: 2px solid #d9d9d9;
+  border-left: 2px solid #d9d9d9;
+  width: 100%;
+}
+
+.section-4 .section-4-content,
+.section-4 .section-4-content .leaderboard-top-1-to-3 .top-user,
+.section-4 .section-4-content .leaderboard-top-1-to-3 .user-information {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-4 .section-4-content .leaderboard-top-1-to-3 {
+  display: flex;
+  gap: 50px;
+}
+
+.section-4 .section-4-content .leaderboard-top-1-to-3 .top-user,
+.section-4 .section-4-content .leaderboard-top-1-to-3 .user-information {
+  align-items: center;
+}
+
+.section-4 .section-4-content .leaderboard-top-1-to-3 .top-user {
+  gap: 10px;
+}
+
+.section-4 .section-4-content .leaderboard-top-1-to-3 .top-1-user {
+  margin-top: -39.5px;
+  margin-bottom: -39.5px;
+}
+
+.section-4 .section-4-content .leaderboard-top-1-to-3 .user-medal {
+  width: 40px;
+  height: 40px;
+}
+
+.section-4 .section-4-content .leaderboard-top-1-to-3 .user-profile {
+  width: 108px;
+  height: 108px;
+}
+
+.section-4 .section-4-content span {
+  font-family: var(--secondary-font);
+}
+
+.section-4 .section-4-content .leaderboard-top-1-to-11,
+.section-4 .section-4-content .leaderboard-top-4-to-7,
+.section-4 .section-4-content .leaderboard-top-4-to-7 .top-user,
+.section-4 .section-4-content .leaderboard-top-4-to-7 .user-information,
+.section-4 .section-4-content .leaderboard-top-8-to-11,
+.section-4 .section-4-content .leaderboard-top-8-to-11 .top-user,
+.section-4 .section-4-content .leaderboard-top-8-to-11 .user-information {
+  display: flex;
+  align-items: center;
+}
+
+.section-4 .section-4-content .leaderboard-top-1-to-11 {
+  gap: 100px;
+}
+.section-4 .section-4-content .leaderboard-top-4-to-7,
+.section-4 .section-4-content .leaderboard-top-8-to-11 {
+  flex-direction: column;
+  gap: 30px;
+}
+
+.section-4 .section-4-content .leaderboard-top-4-to-7 .top-user,
+.section-4 .section-4-content .leaderboard-top-8-to-11 .top-user {
+  gap: 15px;
+}
+
+.section-4 .section-4-content .leaderboard-top-4-to-7 .user-information,
+.section-4 .section-4-content .leaderboard-top-8-to-11 .user-information {
+  gap: 75px;
+  padding: 5px 15px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* WELCOME PAGE SECTION FIVE(5)*/
+.section-5 .section-5-content {
+  padding: 100px;
+  border-right: 2px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
+}
+
+.section-5 .section-5-content .video-gameplay-and-game-info-button {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.section-5
+  .section-5-content
+  .video-gameplay-and-game-info-button
+  .game-info-and-button,
+.section-5 .section-5-content .video-gameplay-and-game-info-button .game-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-5 .section-5-content .video-gameplay-and-game-info-button .video {
+  width: 551px;
+  height: 350px;
+  position: relative;
+}
+
+.section-5 .section-5-content .video-gameplay-and-game-info-button video {
+  width: 551px;
+  height: 350px;
+}
+
+.section-5 .section-5-content .video-gameplay-and-game-info-button span {
+  background: var(--support-color-1);
+  color: var(--support-color-2);
+  padding: 5px 10px;
+  position: absolute;
+  right: -1%;
+  top: 12%;
+
+  font-family: var(--secondary-font);
+  font-size: 12px;
+}
+
+.section-5
+  .section-5-content
+  .video-gameplay-and-game-info-button
+  .game-info-and-button {
+  gap: 25px;
+}
+
+.section-5 .section-5-content .video-gameplay-and-game-info-button .game-info {
+  gap: 16px;
+}
+
+.section-5
+  .section-5-content
+  .video-gameplay-and-game-info-button
+  .game-info-and-button
+  h2,
+.section-5
+  .section-5-content
+  .video-gameplay-and-game-info-button
+  .game-info-and-button
+  p,
+.section-5
+  .section-5-content
+  .video-gameplay-and-game-info-button
+  .game-info-and-button
+  button {
+  font-family: var(--secondary-font);
+}
+
+.section-5
+  .section-5-content
+  .video-gameplay-and-game-info-button
+  .game-info-and-button
+  button {
+  background: var(--secondary-color);
+  font-family: var(--primary-fonts);
+  border: var(--secondary-color);
+  color: #fff;
+  padding: 12px 24px;
+  width: 200px;
+
+  cursor: pointer;
+}
+
+/* WELCOME PAGE FOOTER */
+footer .footer-content {
+  padding: 50px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+
+  border-left: 2px solid #d9d9d9;
+}
+
+footer .footer-content .logo {
+  font-size: 100px;
+  color: var(--primary-color);
+}
+
+footer .footer-content .main-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+footer .footer-content .main-footer .social-media,
+footer .footer-content .main-footer .links,
+footer .footer-content .main-footer .copyright span {
+  display: flex;
+}
+
+footer .footer-content .main-footer .social-media {
+  gap: 25px;
+}
+
+footer .footer-content .main-footer .links {
+  gap: 50px;
+}
+
+footer .footer-content .main-footer .links a {
+  color: var(--support-color-1);
+}
+
+footer .footer-content .main-footer .copyright span {
+  gap: 5px;
+  align-items: center;
+}
+
+footer .footer-content .main-footer .social-media .socmed {
+  background: var(--support-color-2);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+footer .footer-content .main-footer .social-media .socmed img {
+  width: 40px;
+}
+
+footer .footer-content .main-footer .links a,
+footer .footer-content .main-footer .copyright span {
+  font-family: var(--secondary-font);
+}
+
+footer .footer-content .main-footer .copyright .logo {
+  font-size: 22px;
+}
