@@ -109,7 +109,27 @@
   padding: 8px;
   outline: none;
   border: 1px solid #d9d9d9;
-  color: #d9d9d9;
+  color: var(--support-color-1);
+}
+
+.login-form .error {
+  display: none;
+}
+
+.error-username.wrong,
+.error-password.wrong {
+  display: flex;
+  color: red;
+}
+
+.login-form #username.correct,
+.login-form #username.correct {
+  border: 1px solid green;
+}
+
+.login-form #username.wrong,
+.login-form #password.wrong {
+  border: 1px solid red;
 }
 
 .login-content .right-side .login-form {

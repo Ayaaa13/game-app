@@ -55,8 +55,10 @@
             </div>
 
             <form class="login-form" action="">
-              <input type="text" placeholder="Username" />
-              <input type="password" placeholder="Password" />
+              <input id="username" type="text" placeholder="Username" />
+              <p class="error-username error">Wrong Username</p>
+              <input id="password" type="password" placeholder="Password" />
+              <p class="error-password error">Wrong password</p>
 
               <div class="remember-me-and-forgot-password">
                 <div class="remember-me">
@@ -85,5 +87,6 @@
         </div>
       </div>
     </div>
+    <script src="/js/login.js"></script>
   </body>
 </html>
