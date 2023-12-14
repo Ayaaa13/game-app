@@ -112,18 +112,18 @@
   color: var(--support-color-1);
 }
 
-.login-form .error {
+/* .login-form .error {
   display: none;
-}
+} */
 
-.error-username.wrong,
+/* .error-username.wrong,
 .error-password.wrong {
   display: flex;
   color: red;
-}
+} */
 
 .login-form #username.correct,
-.login-form #username.correct {
+.login-form #password.correct {
   border: 1px solid green;
 }
 
