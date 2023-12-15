@@ -1,0 +1,48 @@
+:root {
+    --primary-fonts: "Modern Warfare", sans-serif;
+    --secondary-font: "Poppins", sans-serif;
+    --primary-color: #0e2954;
+    --secondary-color: #1f6e8c;
+    --support-color-1: #000;
+    --support-color-2: #fff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: var(--primary-fonts);
+  }
+
+  .timer-and-startBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .game-timer {
+    font-family: var(--secondary-font);
+    color: var(--support-color-1);
+    font-weight: 700;
+    font-size: 36px;
+  } 
+
+  .start-button {
+    background: var(--secondary-color);
+    color: var(--support-color-2);
+    padding: 10px 20px;
+    border: 1px solid var(--secondary-color);
+
+    cursor: pointer;
+  }
+
+  .start-button:hover {
+    background: none;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+  }
+
+  .problem span {
+    font-family: var(--secondary-font);
+  }
