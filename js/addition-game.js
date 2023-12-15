@@ -13,26 +13,14 @@ function AnswerGame(equals) {
         if(userAnswer === equals) {
             correctOrWrong.innerHTML = String("CORRECT");
             StartGame();
-        } else if (userAnswer !== equals){
+        } else {
             correctOrWrong.innerHTML = String("WRONG");
         }
     
     })
 }
-function StartGame() {
-    // RANDOM NUMBER
-    first = Number(Math.floor(Math.random() * 5));
-    second = Number(Math.floor(Math.random() * 5));
 
-    // ANSWER
-    let equals = first + second;
-    firstNumber.innerHTML = first;
-    secondNumber.innerHTML = second;
-    AnswerGame(equals);
-}
-
-startBtn.addEventListener("click", function() {
-    StartGame()
+function GameTimer() {
     let time = 120;
     function tick() {
         time --;
@@ -45,6 +33,25 @@ startBtn.addEventListener("click", function() {
             Timer.innerHTML = String("TIME IS UP");
         }}
         tick();
+}
+
+function StartGame() {
+    
+    // RANDOM NUMBER
+    first = Number(Math.floor(Math.random() * 5));
+    second = Number(Math.floor(Math.random() * 5));
+
+    // ANSWER
+    let equals = first + second;
+    firstNumber.innerHTML = first;
+    secondNumber.innerHTML = second;
+    AnswerGame(equals);
+    GameTimer();
+    
+}
+
+startBtn.addEventListener("click", function() {
+    StartGame()
     }
 )
 
