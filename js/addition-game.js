@@ -16,7 +16,7 @@ let second = 0;
 firstNumber.innerHTML = first;
 secondNumber.innerHTML = second;
 
-startBtn.addEventListener("click", function() {
+function StartGame() {
     // RANDOM NUMBER
     let first = Number(firstNumber.innerHTML = Math.floor(Math.random() * 5));
     let second = Number(secondNumber.innerHTML = Math.floor(Math.random() * 5));
@@ -35,13 +35,18 @@ startBtn.addEventListener("click", function() {
         
     
         let userAnswer = parseInt(answer.value);
-        console.log("WORKING");
         if(userAnswer === equals) {
             correctOrWrong.innerHTML = String("CORRECT")
+           
+            StartGame()
         }
     
     })
     
+}
+
+startBtn.addEventListener("click", function() {
+    StartGame()
     let time = 120;
     function tick() {
         time --;
@@ -54,7 +59,6 @@ startBtn.addEventListener("click", function() {
             Timer.innerHTML = String("TIME IS UP");
         }}
         tick();
-
     }
 )
 
