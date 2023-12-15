@@ -4,45 +4,31 @@ const firstNumber = document.querySelector(".first-number");
 const secondNumber = document.querySelector(".second-number")
 const answer = document.querySelector(".answer");
 
-
-
-// TIMER 
-let time = 120;
-Timer.innerHTML = time;
-
-// FIRST AND SECOND NUMBER
-let first = 0;
-let second = 0;
-firstNumber.innerHTML = first;
-secondNumber.innerHTML = second;
-
-function StartGame() {
-    // RANDOM NUMBER
-    let first = Number(firstNumber.innerHTML = Math.floor(Math.random() * 5));
-    let second = Number(secondNumber.innerHTML = Math.floor(Math.random() * 5));
-
-    // ANSWER
-    let equals = first + second;
-    console.log(equals);
-
-    
-        firstNumber.innerHTML = Number(first);
-        secondNumber.innerHTML = Number(second);
+function AnswerGame(equals) {
     const answerBtn = document.querySelector(".answerBtn");
-
     answerBtn.addEventListener("click", function(){
         const correctOrWrong = document.querySelector(".correct-or-wrong");
         
-    
-        let userAnswer = parseInt(answer.value);
+        let userAnswer = Number(answer.value);
         if(userAnswer === equals) {
-            correctOrWrong.innerHTML = String("CORRECT")
-           
-            StartGame()
+            correctOrWrong.innerHTML = String("CORRECT");
+            StartGame();
+        } else if (userAnswer !== equals){
+            correctOrWrong.innerHTML = String("WRONG");
         }
     
     })
-    
+}
+function StartGame() {
+    // RANDOM NUMBER
+    first = Number(Math.floor(Math.random() * 5));
+    second = Number(Math.floor(Math.random() * 5));
+
+    // ANSWER
+    let equals = first + second;
+    firstNumber.innerHTML = first;
+    secondNumber.innerHTML = second;
+    AnswerGame(equals);
 }
 
 startBtn.addEventListener("click", function() {
