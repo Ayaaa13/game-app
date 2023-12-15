@@ -46,3 +46,7 @@
   .problem span {
     font-family: var(--secondary-font);
   }
+
+  .answer {
+    font-family: var(--secondary-font);
+  }
