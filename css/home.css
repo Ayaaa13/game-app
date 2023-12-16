@@ -159,7 +159,7 @@
 
   .user-info .bottom{
     display: flex;
-    gap: 60px;
+    gap: 45px;
     flex-direction: column;
   }
 
@@ -185,8 +185,8 @@
   }
   
   .leaderboard-top-1-to-3 .top-1-user {
-    margin-top: -39.5px;
-    margin-bottom: -39.5px;
+    margin-top: -25.5px;
+    margin-bottom: -25.5px;
   }
   
   .leaderboard-top-1-to-3 .user-medal {
