@@ -31,6 +31,7 @@
 
 .game-choice-and-user-info {
   display: flex;
+  flex-wrap: wrap;
   gap: 150px;
   justify-content: center;
 }
@@ -79,7 +80,7 @@
   align-items: center;
 
   cursor: pointer;
-  /* height: 105px;  */
+  width: 500px;
 }
 
 .operation-title,
