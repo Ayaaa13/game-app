@@ -73,7 +73,7 @@ function StartGame() {
   second = Number(Math.floor(Math.random() * 25));
 
   // ANSWER
-  let equals = first + second;
+  let equals = first - second;
   firstNumber.innerHTML = first;
   secondNumber.innerHTML = second;
 

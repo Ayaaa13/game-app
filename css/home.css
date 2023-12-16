@@ -1,200 +1,200 @@
 :root {
-    --primary-fonts: "Modern Warfare", sans-serif;
-    --secondary-font: "Poppins", sans-serif;
-    --primary-color: #0e2954;
-    --secondary-color: #1f6e8c;
-    --support-color-1: #000;
-    --support-color-2: #fff;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: var(--primary-fonts);
-  }
+  --primary-fonts: "Modern Warfare", sans-serif;
+  --secondary-font: "Poppins", sans-serif;
+  --primary-color: #0e2954;
+  --secondary-color: #1f6e8c;
+  --support-color-1: #000;
+  --support-color-2: #fff;
+}
 
-  .home-content {
-    padding: 25px 150px;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: var(--primary-fonts);
+}
 
-  .greetings {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
+.home-content {
+  padding: 25px 150px;
+}
 
-  .greetings h1{
-    color: var(--secondary-color);
-  }
+.greetings {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 
-  .game-choice-and-user-info {
-    display: flex;
-    justify-content: space-between;
-  }
+.greetings h1 {
+  color: var(--secondary-color);
+}
 
-  .greetings span{
-    font-family: var(--secondary-font);
-  }
+.game-choice-and-user-info {
+  display: flex;
+  gap: 150px;
+  justify-content: center;
+}
 
-  .game-choice{
-    display: flex;
-    gap: 25px;
-    
-    height: 400px;
-  }
+.greetings span {
+  font-family: var(--secondary-font);
+}
 
-  .game-choice .all-in-one {
-    width: 340px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(/images/games/All\ In\ One\ Game.png);
-   
-  }
+.game-choice {
+  display: flex;
+  gap: 25px;
 
-  .game-choice .all-game-choice{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+  height: 400px;
+}
 
-  .game-choice .all-in-one .title {
-    font-size: 36px;
-    font-family: var(--primary-fonts);
-    color: var(--support-color-2);
-    transform: rotate(-55deg);  
-  }
+.game-choice .all-in-one {
+  width: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/images/games/All\ In\ One\ Game.png);
+}
 
-  .game-choice .all-in-one,
-  .game-choice .card-game {box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);}
-  
+.game-choice .all-game-choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-  .game-choice .card-game {
-    padding: 15px 30px;
-    display: flex;
-    gap: 15px;
-    align-items: center;
+.game-choice .all-in-one .title {
+  font-size: 36px;
+  font-family: var(--primary-fonts);
+  color: var(--support-color-2);
+  transform: rotate(-55deg);
+}
 
+.game-choice .all-in-one,
+.game-choice .card-game {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
 
-    cursor: pointer;
-    /* height: 105px;  */
-  }
-  
-  .operation-title,
-  .title-text {
-    color: var(--support-color-2);
-  }
+.game-choice .card-game {
+  padding: 15px 30px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
 
-  .game-choice .operation-title {
-    font-size: 36px;
-  }
-  .game-choice .title-text {
-    font-size: 16px;
-    font-family: var(--primary-fonts);
-  }
+  cursor: pointer;
+  /* height: 105px;  */
+}
 
-  .all-game-choice .addition {
-    background-image: url(/images/games/Addition\ Game.png);
-  }
+.operation-title,
+.title-text {
+  color: var(--support-color-2);
+}
 
-  .all-game-choice .subtraction {
-    background-image: url(/images/games/Subtration\ Game.png);
-  }
+.game-choice .operation-title {
+  font-size: 36px;
+}
+.game-choice .title-text {
+  font-size: 16px;
+  font-family: var(--primary-fonts);
+}
 
-  .all-game-choice .multiplication {
-    background-image: url(/images/games/Multiplication\ Game.png);
-  }
+.all-game-choice .addition {
+  background-image: url(/images/games/Addition\ Game.png);
+}
 
-  .all-game-choice .division {
-    background-image: url(/images/games/Division\ Game.png);
-  }
+.all-game-choice .subtraction {
+  background-image: url(/images/games/Subtration\ Game.png);
+}
 
-  .profile-and-name {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-  }
-  
-  .profile-and-name .user-profile,
-  .profile-and-name .user-profile img {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .profile-and-name .name {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .profile-and-name .name span {
-    font-family: var(--secondary-font);
-  }
-  
-  .profile-and-name .name .fullname {
-    font-size: 16px;
-  }
-  
-  .profile-and-name .name .nickname {
-    color: #7a7878;
-    font-size: 14px;
-  }
+.all-game-choice .multiplication {
+  background-image: url(/images/games/Multiplication\ Game.png);
+}
 
-  .user-info {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: 400px;
-  }
+.all-game-choice .division {
+  background-image: url(/images/games/Division\ Game.png);
+}
 
-  .user-info .mid .highscore {
-    display: flex;
-    gap: 5px;
-  }
+.profile-and-name {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
 
-  .user-info .mid .highscore span {
-    font-size: 22px;
-  }
+.profile-and-name .user-profile,
+.profile-and-name .user-profile img {
+  width: 50px;
+  height: 50px;
+}
 
-  .user-info .bottom{
-    display: flex;
-    gap: 45px;
-    flex-direction: column;
-  }
+.profile-and-name .name {
+  display: flex;
+  flex-direction: column;
+}
 
-  .leaderboard-top-1-to-3 .top-user,
+.profile-and-name .name span {
+  font-family: var(--secondary-font);
+}
+
+.profile-and-name .name .fullname {
+  font-size: 16px;
+}
+
+.profile-and-name .name .nickname {
+  color: #7a7878;
+  font-size: 14px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 400px;
+}
+
+.user-info .mid .highscore {
+  display: flex;
+  gap: 5px;
+}
+
+.user-info .mid .highscore span {
+  font-size: 22px;
+}
+
+.user-info .bottom {
+  display: flex;
+  gap: 45px;
+  flex-direction: column;
+}
+
+.leaderboard-top-1-to-3 .top-user,
 .leaderboard-top-1-to-3 .user-information {
   display: flex;
   flex-direction: column;
 }
 
-  .leaderboard-top-1-to-3 {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-  }
-  
-  .leaderboard-top-1-to-3 .top-user,
-  .leaderboard-top-1-to-3 .user-information {
-    align-items: center;
-  }
-  
-  .leaderboard-top-1-to-3 .top-user {
-    gap: 10px;
-  }
-  
-  .leaderboard-top-1-to-3 .top-1-user {
-    margin-top: -25.5px;
-    margin-bottom: -25.5px;
-  }
-  
-  .leaderboard-top-1-to-3 .user-medal {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .leaderboard-top-1-to-3 .user-profile {
-    width: 75px;
-    height: 75px;
-  }
+.leaderboard-top-1-to-3 {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.leaderboard-top-1-to-3 .top-user,
+.leaderboard-top-1-to-3 .user-information {
+  align-items: center;
+}
+
+.leaderboard-top-1-to-3 .top-user {
+  gap: 10px;
+}
+
+.leaderboard-top-1-to-3 .top-1-user {
+  margin-top: -25.5px;
+  margin-bottom: -25.5px;
+}
+
+.leaderboard-top-1-to-3 .user-medal {
+  width: 40px;
+  height: 40px;
+}
+
+.leaderboard-top-1-to-3 .user-profile {
+  width: 75px;
+  height: 75px;
+}

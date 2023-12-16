@@ -24,7 +24,7 @@
 }
 
 .game-title .operation-title,
-.game-title .operation-title-text{
+.game-title .operation-title-text {
   color: var(--secondary-color);
 }
 
@@ -37,7 +37,7 @@
   font-size: 40px;
 }
 
-.timer-and-startBtn {
+.timer-and-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,7 +50,12 @@
   font-size: 50px;
 }
 
-.start-button {
+.timer-and-buttons .buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.buttons .start-button {
   background: var(--secondary-color);
   color: var(--support-color-2);
   padding: 10px 20px;
@@ -65,11 +70,94 @@
   border: 1px solid var(--secondary-color);
 }
 
+.start-button.disabled {
+  pointer-events: none;
+}
+
+.quit-button {
+  background: red;
+  color: var(--support-color-2);
+  padding: 10px 20px;
+  border: 1px solid red;
+
+  pointer-events: none;
+}
+
+.quit-button:hover {
+  background: none;
+  color: red;
+  border: 1px solid red;
+}
+
+.quit-button.abled {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.quit-modal {
+  display: none;
+}
+
+.quit-modal.visible {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 50px;
+  border: 1px solid black;
+  background: var(--support-color-2);
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 100;
+}
+
+.quit-overlay {
+  display: none;
+}
+
+.quit-overlay.visible {
+  display: flex;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: rgba(255, 255, 255, 0.5);
+  filter: blur(100px);
+
+  z-index: 5;
+}
+
+.quit-modal .quit-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.quit-modal h2 {
+  color: var(--primary-color);
+}
+
+.quit-buttons button {
+  padding: 5px 10px;
+  font-family: var(--secondary-font);
+
+  cursor: pointer;
+}
+
 .arithmetic-solving-and-user-game-information {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 150px;
+  justify-content: center;
 
-  padding: 25px 150px;
+  padding: 25px 0px;
 }
 
 .problem span {
@@ -94,7 +182,7 @@
   font-size: 24px;
 }
 
-.addition-game-content {
+.game-content {
   padding: 5px 150px;
 }
 
@@ -113,7 +201,7 @@
 }
 
 .reveal-answer span,
-.arithmetic-solving .question-mark{
+.arithmetic-solving .question-mark {
   font-family: var(--secondary-font);
 }
 
@@ -125,6 +213,11 @@
 .arithmetic-solving .answerBtn {
   padding: 10px 20px;
 
+  pointer-events: none;
+}
+
+.arithmetic-solving .answerBtn.abled {
+  pointer-events: auto;
   cursor: pointer;
 }
 

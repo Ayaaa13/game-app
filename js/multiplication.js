@@ -69,11 +69,11 @@ function GameTimer() {
 
 function StartGame() {
   // RANDOM NUMBER
-  first = Number(Math.floor(Math.random() * 25));
-  second = Number(Math.floor(Math.random() * 25));
+  first = Number(Math.floor(Math.random() * 10) + 1);
+  second = Number(Math.floor(Math.random() * 10) + 1);
 
   // ANSWER
-  let equals = first + second;
+  let equals = first * second;
   firstNumber.innerHTML = first;
   secondNumber.innerHTML = second;
 
