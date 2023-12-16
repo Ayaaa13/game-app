@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -18,37 +18,75 @@
       href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display+SC:wght@700&family=Poppins:ital,wght@0,300;0,400;0,700;1,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/game.css">
+    <link rel="stylesheet" href="/css/game.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+
     <title>Addition Game - AGAME</title>
-</head>
-<body>
+  </head>
+  <body>
+    <header class="home-header">
+      <span class="logo">AGAME</span>
+      <nav class="main-navbar">
+        <a href="">Home</a><a href="">About Us</a><a href="">Leaderboards</a
+        ><a href="">Contact</a><a href="">How to Play</a>
+
+        <div class="user-profile">
+          <img src="/images/user/user-1.png" alt="" />
+        </div>
+      </nav>
+    </header>
     <div class="addition-game-content">
-        <div class="timer-and-startBtn">
-            <div class="game-timer">120</div>
-            <button class="start-button">Start</button>
+      <div class="timer-and-startBtn">
+        <div class="game-timer">120</div>
+        <button class="start-button">Start</button>
+      </div>
+
+      <div class="arithmetic-solving-and-user-game-information">
+        <div class="arithmetic-solving">
+          <span class="answer-question">What is your Answer?</span>
+          <div class="problem">
+            <span class="first-number">0</span>
+            <span class="operation">+</span>
+            <span class="second-number">0</span>
+          </div>
+          <div class="reveal-answer">
+            <span>=</span>
+            <span>Your answer: <span class="user-answer">?</span></span>
+          </div>
+
+          <input type="number" class="answer" />
+
+          <button class="answerBtn">Enter</button>
         </div>
 
-        <div class="arithmetic-solving-and-user-game-information">
-            <div class="arithmetic-solving">
-                <span class="answer-question">What is your Answer?</span>
-                <div class="problem">
-                    <span class="first-number">0</span>
-                    <span class="operation">+</span>
-                    <span class="second-number">0</span>
-                </div>
-                <div class="reveal-answer">
-                    <span>=</span>
-                    <span>Your answer: <span class="user-answer"></span></span>
-                </div>
-
-                <input type="number" class="answer">
-                <button class="answerBtn">Enter</button>
-
-                <div class="correct-or-wrong"></div>
+        <div class="user-game-information">
+          <div class="profile-and-name">
+            <div class="user-profile">
+              <img src="/images/user/user-1.png" alt="" />
             </div>
+            <div class="name">
+              <span class="fullname">Jeremiah Nava</span>
+              <span class="nickname">@AiahNava</span>
+            </div>
+          </div>
+
+          <div class="score-and-highscore">
+            <div class="score">
+              <div class="score-text">
+                Score: <span class="score-number">0</span>
+              </div>
+            </div>
+
+            <div class="highscore">
+              <div class="highscore-text">
+                HighScore: <span class="highscore-number">0</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <script src="/js/addition-game.js"></script>
-</body>
+  </body>
 </html>

@@ -1,52 +1,155 @@
 :root {
-    --primary-fonts: "Modern Warfare", sans-serif;
-    --secondary-font: "Poppins", sans-serif;
-    --primary-color: #0e2954;
-    --secondary-color: #1f6e8c;
-    --support-color-1: #000;
-    --support-color-2: #fff;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: var(--primary-fonts);
-  }
+  --primary-fonts: "Modern Warfare", sans-serif;
+  --secondary-font: "Poppins", sans-serif;
+  --primary-color: #0e2954;
+  --secondary-color: #1f6e8c;
+  --support-color-1: #000;
+  --support-color-2: #fff;
+}
 
-  .timer-and-startBtn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: var(--primary-fonts);
+}
 
-  .game-timer {
-    font-family: var(--secondary-font);
-    color: var(--support-color-1);
-    font-weight: 700;
-    font-size: 36px;
-  } 
+.timer-and-startBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .start-button {
-    background: var(--secondary-color);
-    color: var(--support-color-2);
-    padding: 10px 20px;
-    border: 1px solid var(--secondary-color);
+.game-timer {
+  font-family: var(--secondary-font);
+  color: var(--support-color-1);
+  font-weight: 700;
+  font-size: 50px;
+}
 
-    cursor: pointer;
-  }
+.start-button {
+  background: var(--secondary-color);
+  color: var(--support-color-2);
+  padding: 10px 20px;
+  border: 1px solid var(--secondary-color);
 
-  .start-button:hover {
-    background: none;
-    color: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
-  }
+  cursor: pointer;
+}
 
-  .problem span {
-    font-family: var(--secondary-font);
-  }
+.start-button:hover {
+  background: none;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
 
-  .answer {
-    font-family: var(--secondary-font);
-  }
+.arithmetic-solving-and-user-game-information {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 100px 350px;
+}
+
+.problem span {
+  font-family: var(--secondary-font);
+}
+
+.answer {
+  font-family: var(--secondary-font);
+  text-align: center;
+
+  width: 320px;
+  height: 50px;
+  font-size: 24px;
+}
+
+.addition-game-content {
+  padding: 50px 150px;
+}
+
+.arithmetic-solving,
+.reveal-answer {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arithmetic-solving .answer-question,
+.arithmetic-solving .problem span,
+.arithmetic-solving .reveal-answer {
+  font-size: 30px;
+}
+
+.arithmetic-solving .problem {
+  display: flex;
+  gap: 100px;
+}
+
+.arithmetic-solving .answerBtn {
+  padding: 10px 20px;
+
+  cursor: pointer;
+}
+
+.user-game-information {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+
+.profile-and-name {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.profile-and-name .user-profile,
+.profile-and-name .user-profile img {
+  width: 50px;
+  height: 50px;
+}
+
+.profile-and-name .name {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-and-name .name span {
+  font-family: var(--secondary-font);
+}
+
+.profile-and-name .name .fullname {
+  font-size: 16px;
+}
+
+.profile-and-name .name .nickname {
+  color: #7a7878;
+  font-size: 14px;
+}
+
+.score-text,
+.score-number,
+.highscore-text,
+.highscore-number {
+  font-family: var(--secondary-font);
+  font-size: 24px;
+}
+
+.score-text,
+.highscore-text {
+  font-weight: 700;
+}
+
+.score-number,
+.highscore-number {
+  font-weight: 500;
+}
+
+body.wrong {
+  background: red;
+}
+
+body.correct {
+  color: green;
+}

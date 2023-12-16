@@ -1,0 +1,48 @@
+:root {
+  --primary-fonts: "Modern Warfare", sans-serif;
+  --secondary-font: "Poppins", sans-serif;
+  --primary-color: #0e2954;
+  --secondary-color: #1f6e8c;
+  --support-color-1: #000;
+  --support-color-2: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: var(--primary-fonts);
+}
+
+header {
+  padding: 15px 150px;
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.home-header .logo {
+  font-size: 32px;
+  color: var(--primary-color);
+}
+
+.home-header .main-navbar {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.home-header .main-navbar a {
+  font-size: 12px;
+}
+
+.home-header .user-profile img {
+  width: 50px;
+  height: 50px;
+}
