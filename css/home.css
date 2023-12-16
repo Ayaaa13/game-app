@@ -32,7 +32,7 @@
 .game-choice-and-user-info {
   display: flex;
   flex-wrap: wrap;
-  gap: 150px;
+  gap: 75px;
   justify-content: center;
 }
 
@@ -198,4 +198,49 @@
 .leaderboard-top-1-to-3 .user-profile {
   width: 75px;
   height: 75px;
+}
+
+@media screen and (max-width: 1200px) {
+  .game-choice-and-user-info {
+    gap: 75px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .home-content {
+    padding: 25px 100px;
+  }
+  .game-choice .all-in-one {
+    width: 300px;
+  }
+  .game-choice .card-game {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 1039px) {
+  .home-content {
+    padding: 25px 25px;
+  }
+
+  .game-choice .card-game {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .game-choice .all-in-one {
+    display: flex;
+    width: 100px;
+  }
+
+  .game-choice .all-in-one .title {
+    width: 300px;
+    font-size: 24px;
+    transform: rotate(-90deg);
+  }
+
+  .game-choice .card-game {
+    width: 300px;
+  }
 }

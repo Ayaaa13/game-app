@@ -154,7 +154,7 @@
 .arithmetic-solving-and-user-game-information {
   display: flex;
   flex-wrap: wrap;
-  gap: 150px;
+  gap: 100px;
   justify-content: center;
 
   padding: 25px 0px;
@@ -281,4 +281,31 @@ body.wrong {
 
 body.correct {
   color: green;
+}
+
+@media screen and (max-width: 1039px) {
+  .game-content {
+    padding: 5px 50px;
+  }
+  .arithmetic-solving-and-user-game-information {
+    gap: 50px;
+  }
+
+  .arithmetic-solving .answer-question {
+    font-size: 24px;
+  }
+
+  .game-title {
+    padding: 25px 25px;
+  }
+  .game-title .operation-title-text {
+    font-size: 30px;
+  }
+
+  .game-title .operation-title {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 900px) {
 }
