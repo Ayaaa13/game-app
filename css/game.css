@@ -47,7 +47,7 @@
   display: flex;
   justify-content: space-between;
 
-  padding: 100px 350px;
+  padding: 100px 150px;
 }
 
 .problem span {
@@ -79,6 +79,10 @@
 .arithmetic-solving .problem span,
 .arithmetic-solving .reveal-answer {
   font-size: 30px;
+}
+
+.reveal-answer span{
+  font-family: var(--secondary-font);
 }
 
 .arithmetic-solving .problem {

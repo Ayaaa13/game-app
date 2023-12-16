@@ -17,9 +17,30 @@ highscoreNumber.innerHTML = highscore;
 
 function WrongAnswer() {
   body.classList.add("wrong");
+  body.classList.remove("correct");
 
   setTimeout(function () {
     body.classList.remove("wrong");
+  }, 100);
+}
+
+function AnswerIsTrue() {
+  score++;
+  scoreNumber.innerHTML = score;
+
+  answer.value = "";
+  if (score > highscore) {
+    highscore.innerHTML = score;
+    highscoreNumber.innerHTML = score;
+  }
+}
+
+function CorrectAnswer(){
+  body.classList.add("correct");
+  body.classList.remove("wrong");
+
+  setTimeout(function () {
+    body.classList.remove("correct");
   }, 100);
 }
 
@@ -29,14 +50,8 @@ function AnswerGame(equals) {
 
     myAnswer.innerHTML = userAnswer;
     if (userAnswer === equals) {
-      score++;
-      scoreNumber.innerHTML = score;
-
-      answer.value = "";
-      if (score > highscore) {
-        highscore.innerHTML = score;
-        highscoreNumber.innerHTML = score;
-      }
+      AnswerIsTrue();
+      CorrectAnswer();
       StartGame();
     } else {
       WrongAnswer();

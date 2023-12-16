@@ -17,6 +17,7 @@
 
 header {
   padding: 15px 150px;
+  background: var(--support-color-2);
 }
 
 .home-header {
@@ -40,6 +41,11 @@ header {
 
 .home-header .main-navbar a {
   font-size: 12px;
+  color: var(--support-color-1);
+}
+
+.home-header .main-navbar a:hover {
+  color: var(--primary-color);
 }
 
 .home-header .user-profile img {
