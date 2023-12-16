@@ -15,6 +15,29 @@
   font-family: var(--primary-fonts);
 }
 
+.game-title {
+  padding: 0px 150px;
+  margin-top: 50px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-title .operation-title,
+.game-title .operation-title-text{
+  color: var(--secondary-color);
+}
+
+.game-title .operation-title {
+  font-family: var(--secondary-font);
+  font-size: 60px;
+}
+
+.game-title .operation-title-text {
+  font-size: 40px;
+}
+
 .timer-and-startBtn {
   display: flex;
   flex-direction: column;
@@ -47,11 +70,20 @@
   display: flex;
   justify-content: space-between;
 
-  padding: 100px 150px;
+  padding: 50px 150px;
 }
 
 .problem span {
   font-family: var(--secondary-font);
+}
+
+.problem .operation {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.equals-to {
+  font-weight: 700;
 }
 
 .answer {
@@ -64,7 +96,7 @@
 }
 
 .addition-game-content {
-  padding: 50px 150px;
+  padding: 25px 150px;
 }
 
 .arithmetic-solving,
