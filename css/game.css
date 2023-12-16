@@ -95,13 +95,13 @@
 }
 
 .addition-game-content {
-  padding: 25px 150px;
+  padding: 5px 150px;
 }
 
 .arithmetic-solving,
 .reveal-answer {
   display: flex;
-  gap: 30px;
+  gap: 20px;
   flex-direction: column;
   align-items: center;
 }
@@ -112,7 +112,8 @@
   font-size: 30px;
 }
 
-.reveal-answer span{
+.reveal-answer span,
+.arithmetic-solving .question-mark{
   font-family: var(--secondary-font);
 }
 

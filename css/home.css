@@ -40,8 +40,8 @@
 
   .game-choice{
     display: flex;
-    gap: 50px;
-
+    gap: 25px;
+    
     height: 400px;
   }
 
