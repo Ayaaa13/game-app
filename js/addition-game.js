@@ -74,6 +74,7 @@ function StartGame() {
 
   // ANSWER
   let equals = first + second;
+
   firstNumber.innerHTML = first;
   secondNumber.innerHTML = second;
 

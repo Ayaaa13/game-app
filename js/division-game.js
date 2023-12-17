@@ -69,15 +69,16 @@ function GameTimer() {
 
 function StartGame() {
   // RANDOM NUMBER
-  first = Number(Math.floor(Math.random() * 10) + 1);
-  second = Number(Math.floor(Math.random() * 10) + 1);
+  let first = parseFloat(Math.floor(Math.random() * 10) + 1);
+  let second = parseFloat(Math.floor(Math.random() * 10) + 1);
 
   // ANSWER
   let equals = first / second;
+  let finalEquals = equals.toFixed(2);
+  console.log(finalEquals);
   firstNumber.innerHTML = first;
   secondNumber.innerHTML = second;
-
-  AnswerGame(equals);
+  AnswerGame(finalEquals);
 }
 
 startBtn.addEventListener("click", function () {
@@ -130,12 +131,13 @@ noBtn.addEventListener("click", function () {
   RemoveQuitModal();
 });
 
-function AnswerGame(equals) {
+function AnswerGame(finalEquals) {
   answerBtn.addEventListener("click", function () {
     let userAnswer = Number(answer.value);
 
     myAnswer.innerHTML = userAnswer;
-    if (userAnswer === equals) {
+
+    if (userAnswer === parseFloat(finalEquals)) {
       AnswerIsTrue();
       CorrectAnswer();
       StartGame();

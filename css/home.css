@@ -17,6 +17,11 @@
 
 .home-content {
   padding: 25px 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 90vh;
 }
 
 .greetings {
