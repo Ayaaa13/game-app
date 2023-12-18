@@ -27,8 +27,15 @@ closeModal.addEventListener("click", function () {
 });
 
 const barsBtn = document.querySelector(".barsBtn");
-const navbarModal = document.querySelector(".navbar-modal .main-navbar");
+const navbarModal = document.querySelector(".navbar-modal");
+const navbarOverlay = document.querySelector(".navbar-overlay");
 
 barsBtn.addEventListener("click", function(){
-  navbarModal.classList.toggle("visible")
+  navbarModal.classList.add("visible");
+  navbarOverlay.classList.add("visible");
+})
+
+navbarOverlay.addEventListener("click", function(){
+  navbarModal.classList.remove("visible");
+  navbarOverlay.classList.remove("visible");
 })
