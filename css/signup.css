@@ -137,3 +137,49 @@
   display: flex;
   justify-content: center;
 }
+
+@media screen and (max-width: 1050px) {
+  .signup-content {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .signup-content .left-side {
+    display: none;
+    /* background-repeat: no-repeat; */
+  }
+
+  .signup-content .right-side {
+    display: flex;
+    justify-content: center;
+    /* height: 95vh; */
+
+    padding-top: 50px;
+  }
+
+  .signup-content .logo-signup {
+    display: flex;
+    font-size: 60px;
+    color: var(--secondary-color);
+
+    width: 100%;
+    padding: 25px;
+  }
+
+  .signup-content {
+    background-image: url(/images/login-and-signup/SignupImage.png);
+    height: 100vh;
+  }
+
+  .signup-content .right-side .social-media-signup .google-signup {
+    color: var(--support-color-1);
+  }
+  .remember-me-and-forgot-password .remember-me label,
+  .signup-content .signup-with span,
+  .welcome h1,
+  .welcome p,
+  .dont-have-account span {
+    color: var(--support-color-2);
+  }
+}
