@@ -183,7 +183,7 @@ header nav a {
 .section-3 .section-3-content h1,
 .section-4 .section-4-content h1,
 .section-5 .section-5-content h1 {
-  font-size: 50px;
+  font-size: 40px;
   color: var(--primary-color);
 }
 
@@ -238,6 +238,7 @@ header nav a {
 .section-3 .section-3-content {
   display: flex;
   gap: 100px;
+  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
   padding: 100px;
@@ -369,7 +370,8 @@ header nav a {
 }
 
 .section-4 .section-4-content .leaderboard-top-1-to-11 {
-  gap: 100px;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 .section-4 .section-4-content .leaderboard-top-4-to-7,
 .section-4 .section-4-content .leaderboard-top-8-to-11 {
@@ -541,4 +543,79 @@ footer .footer-content .main-footer .copyright span {
 
 footer .footer-content .main-footer .copyright .logo {
   font-size: 22px;
+}
+
+@media screen and (max-width: 1350px) {
+  section,
+  footer {
+    padding: 0px 100px;
+  }
+
+  .section-2 .section-2-content,
+  .section-3 .section-3-content,
+  .section-4 .section-4-content {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  section,
+  footer {
+    padding: 0px 50px;
+  }
+
+  .section-2 .section-2-content,
+  .section-3 .section-3-content,
+  .section-4 .section-4-content {
+    padding: 25px;
+  }
+}
+
+@media screen and (max-width: 946px) {
+  .section-4 .section-4-content .leaderboard-top-1-to-11 {
+    gap: 50px;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  section,
+  footer {
+    padding: 0px 25px;
+  }
+
+  .section-2 .section-2-content,
+  .section-3 .section-3-content {
+    padding: 16px;
+  }
+  
+
+  .section-1 .section-1-content h1,
+  .section-2 .section-2-content h1,
+  .section-3 .section-3-content h1,
+  .section-4 .section-4-content h1,
+  .section-5 .section-5-content h1 {
+    font-size: 12px;
+  }
+
+  .section-2 p,
+  .section-3 p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .section-2 .section-2-content .left-side {
+    width: 100%;
+  }
+
+  .section-2 .section-2-content,
+  .section-3 .section-3-content {
+    width: 100%;
+  }
+
+  .section-2-content img,
+  .section-3-content img {
+    width: 100%;
+  }
 }
