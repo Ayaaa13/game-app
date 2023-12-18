@@ -17,16 +17,18 @@
 
 .login-content {
   display: flex;
-  align-items: center;
-
   width: 100%;
+}
+
+.login-content .logo-login{
+  display: none;
 }
 
 .login-content .left-side {
   width: 30%;
   z-index: 100;
   width: 549px;
-  height: 953px;
+  height: 100vh;
   position: relative;
   background-image: url(/images/login-and-signup/LoginImage.png);
 }
@@ -40,24 +42,18 @@
   font-size: 50px;
 }
 
-.login-content .right-side p,
-.login-content .right-side a span,
-.login-content .right-side .login-with span,
-.login-content .right-side .login-form input,
-.login-content
-  .right-side
-  .login-form
-  .remember-me-and-forgot-password
+.right-side p,
+.right-side a span,
+.right-side .login-with span,
+.right-side .login-form input,
+.remember-me-and-forgot-password
   .remember-me
   label,
-.login-content
-  .right-side
-  .login-form
-  .remember-me-and-forgot-password
+.remember-me-and-forgot-password
   .forgot-password
   a,
-.login-content .right-side span,
-.login-content .right-side span a {
+.right-side span,
+.right-side span a {
   font-family: var(--secondary-font);
   font-size: 12px;
 }
@@ -67,7 +63,7 @@
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding-top: 150px;
 }
 
 .login-content .right-side .right-side-content {
@@ -177,4 +173,50 @@
 .login-content .right-side .dont-have-account {
   display: flex;
   justify-content: center;
+}
+
+@media screen and (max-width: 1050px) {
+  .login-content {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login-content .left-side {
+    display: none;
+    /* background-repeat: no-repeat; */
+  }
+
+  .login-content .right-side {
+    display: flex;
+    justify-content: center;
+    /* height: 95vh; */
+
+    padding-top: 50px;
+  }
+
+  .login-content .logo-login{
+    display: flex;
+    font-size: 60px;
+    color: var(--secondary-color);
+
+    width: 100%;
+    padding: 25px;
+  }
+  
+  .login-content {
+    background-image: url(/images/login-and-signup/LoginImage.png);
+    height: 100vh;
+  }
+
+  .login-content .right-side .social-media-login .google-login {
+    color: var(--support-color-1);
+  }
+  .remember-me-and-forgot-password .remember-me label,
+  .login-content .login-with span,
+  .welcome h1,
+  .welcome p,
+  .dont-have-account span {
+    color: var(--support-color-2);
+  }
 }
