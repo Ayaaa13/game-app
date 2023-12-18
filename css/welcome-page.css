@@ -17,6 +17,7 @@
 
 header,
 nav,
+header .main-navbar,
 section {
   display: flex;
 }
@@ -39,6 +40,22 @@ nav {
   align-items: center;
 }
 
+.main-navbar {
+  gap: 20px;
+}
+
+.main-navbar a:hover {
+  color: var(--secondary-color);
+}
+
+.barsBtn {
+  display: none;
+}
+
+.navbar-modal {
+  display: none;
+}
+
 header .logo,
 .play-now-modal .logo {
   font-size: 32px;
@@ -53,11 +70,17 @@ header nav a {
 .play-now-button {
   background: var(--secondary-color);
   font-family: var(--primary-fonts);
-  border: var(--secondary-color);
-  color: #fff;
+  border: 1px solid var(--secondary-color);
+  color: var(--support-color-2);
   padding: 12px 24px;
 
   cursor: pointer;
+}
+
+.play-now-button:hover {
+  background: none;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 .play-now-modal {
@@ -92,6 +115,10 @@ header nav a {
   filter: blur(100px);
 
   z-index: 5;
+}
+
+.navbar-overlay {
+  display: none;
 }
 
 .account-setup,
@@ -183,7 +210,7 @@ header nav a {
 .section-3 .section-3-content h1,
 .section-4 .section-4-content h1,
 .section-5 .section-5-content h1 {
-  font-size: 40px;
+  font-size: 50px;
   color: var(--primary-color);
 }
 
@@ -216,7 +243,7 @@ header nav a {
   text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
 }
 
-.section-1 .play-free {
+.play-free {
   background: var(--secondary-color);
   font-family: var(--primary-fonts);
   border: var(--secondary-color);
@@ -226,22 +253,20 @@ header nav a {
   cursor: pointer;
 }
 
-/* .section-1 .arithmethic-symbol {
-  padding: 8px 16px;
-  font-family: var(--secondary-font);
-
-  position: absolute;
-} */
+.play-free:hover {
+  background: none;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
 
 /* WELCOME PAGE SECTION TWO(2) and WELCOME PAGE SECTION THREE(3) */
 .section-2 .section-2-content,
 .section-3 .section-3-content {
   display: flex;
   gap: 100px;
-  /* flex-wrap: wrap; */
   justify-content: center;
-  align-items: center;
-  padding: 100px;
+  /* align-items: center; */
+  padding: 50px;
   border-bottom: 2px solid #d9d9d9;
 }
 
@@ -249,9 +274,14 @@ header nav a {
   border-left: 2px solid #d9d9d9;
 }
 
+/* .section-2 .section-2-content .left-side {
+  width: 500px;
+} */
+
 .section-3 .section-3-content {
   border-right: 2px solid #d9d9d9;
 }
+
 .section-2 .section-2-content .left-side,
 .section-2 .section-2-content .welcome,
 .section-3 .section-3-content .right-side,
@@ -259,6 +289,7 @@ header nav a {
   display: flex;
   flex-direction: column;
 }
+
 .section-2 .section-2-content .left-side,
 .section-3 .section-3-content .right-side {
   gap: 15px;
@@ -277,17 +308,19 @@ header nav a {
 .section-2 p,
 .section-3 p {
   font-family: var(--secondary-font);
+  font-size: 16px;
 }
 
 .section-2 .learnMoreBtn {
   display: flex;
-  gap: 5px;
+  gap: 10px;
   align-items: center;
-  padding: 8px 16px;
+  justify-content: center;
+  padding: 12px 24px;
   background: var(--support-color-2);
   border: none;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-  width: 150px;
+  width: 200px;
   cursor: pointer;
 }
 
@@ -295,12 +328,13 @@ header nav a {
   display: flex;
   gap: 5px;
   align-items: center;
+  justify-content: center;
   background: var(--secondary-color);
   font-family: var(--primary-fonts);
   border: var(--secondary-color);
   color: var(--support-color-2);
   padding: 12px 24px;
-  width: 140px;
+  width: 200px;
 
   cursor: pointer;
 }
@@ -370,8 +404,7 @@ header nav a {
 }
 
 .section-4 .section-4-content .leaderboard-top-1-to-11 {
-  gap: 30px;
-  flex-wrap: wrap;
+  gap: 100px;
 }
 .section-4 .section-4-content .leaderboard-top-4-to-7,
 .section-4 .section-4-content .leaderboard-top-8-to-11 {
@@ -414,13 +447,13 @@ header nav a {
 }
 
 .section-5 .section-5-content .video-gameplay-and-game-info-button .video {
-  width: 551px;
+  width: 550px;
   height: 350px;
   position: relative;
 }
 
 .section-5 .section-5-content .video-gameplay-and-game-info-button video {
-  width: 551px;
+  width: 550px;
   height: 350px;
 }
 
@@ -482,7 +515,6 @@ header nav a {
 
 /* WELCOME PAGE FOOTER */
 footer .footer-content {
-  padding: 50px 100px;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -588,7 +620,6 @@ footer .footer-content .main-footer .copyright .logo {
   .section-3 .section-3-content {
     padding: 16px;
   }
-  
 
   .section-1 .section-1-content h1,
   .section-2 .section-2-content h1,
@@ -617,5 +648,232 @@ footer .footer-content .main-footer .copyright .logo {
   .section-2-content img,
   .section-3-content img {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  header .main-navbar {
+    display: none;
+  }
+
+  .barsBtn {
+    display: flex;
+    font-size: 24px;
+
+    cursor: pointer;
+  }
+
+  .navbar-modal.visible {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+
+    padding: 25px 50px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 400px;
+    background: var(--support-color-2);
+    z-index: 100;
+  }
+
+  .navbar-overlay.visible {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: var(--support-color-2);
+    filter: blur(150px);
+    z-index: 5;
+  }
+
+  .navbar-modal .logo {
+    font-size: 50px;
+    color: var(--primary-color);
+  }
+
+  .navbar-modal .main-navbar {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .navbar-modal .main-navbar a {
+    color: var(--support-color-1);
+    width: fit-content;
+  }
+
+  .navbar-modal .main-navbar a:hover {
+    color: var(--secondary-color);
+  }
+
+  .navbar-modal.visible {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+
+    padding: 25px 50px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 400px;
+    background: var(--support-color-2);
+    z-index: 100;
+  }
+
+  .navbar-overlay.visible {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: var(--support-color-2);
+    filter: blur(150px);
+    z-index: 5;
+  }
+
+  section,
+  footer {
+    padding: 0px 100px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .section-2 .section-2-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-3 .section-3-content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .section-5 .section-5-content .video-gameplay-and-game-info-button {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  header {
+    padding: 25px 25px;
+  }
+
+  header .logo {
+    font-size: 24px;
+  }
+
+  .barsBtn {
+    font-size: 16px;
+  }
+
+  .section-2 .section-2-content,
+  .section-3 .section-3-content,
+  .section-4 .section-4-content,
+  .section-5 .section-5-content {
+    padding: 50px;
+  }
+  .section-1 .logo {
+    font-size: 60px;
+  }
+
+  .play-now-button,
+  .play-free {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .account-setup-buttons .signup a,
+  .account-setup-buttons .login a {
+    font-size: 10px;
+  }
+
+  .play-now-modal .logo {
+    font-size: 24px;
+  }
+  .setup-title {
+    font-size: 12px;
+  }
+
+  .account-setup {
+    width: 480px;
+  }
+
+  .section-2 .section-2-content h1 {
+    font-size: 24px;
+  }
+
+  .section-2 .section-2-content p {
+    font-size: 12px;
+  }
+
+  section {
+    padding: 0px 50px;
+  }
+
+  footer .footer-content .main-footer .links a {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  section,
+  footer {
+    padding: 0px 15px;
+  }
+
+  .section-2 .section-2-content,
+  .section-3 .section-3-content,
+  .section-4 .section-4-content,
+  .section-5 .section-5-content {
+    padding: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section,
+  footer {
+    padding: 5px;
+  }
+
+  footer .footer-content .logo {
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 565px) {
+  .section-2 .section-2-content .left-side,
+  .section-3 .section-3-content .right-side,
+  .section-2 .section-2-content img,
+  .section-3 .section-3-content img {
+    width: 460px;
+  }
+
+  .section-5 .section-5-content .video-gameplay-and-game-info-button .video {
+    width: 430px;
+  }
+
+  .section-5 .section-5-content .video-gameplay-and-game-info-button video {
+    width: 430px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .section-2 .section-2-content .left-side,
+  .section-3 .section-3-content .right-side,
+  .section-2 .section-2-content img,
+  .section-3 .section-3-content img {
+    width: 420px;
   }
 }
