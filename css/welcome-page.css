@@ -210,7 +210,7 @@ header nav a {
 .section-3 .section-3-content h1,
 .section-4 .section-4-content h1,
 .section-5 .section-5-content h1 {
-  font-size: 50px;
+  font-size: 32px;
   color: var(--primary-color);
 }
 
@@ -263,7 +263,7 @@ header nav a {
 .section-2 .section-2-content,
 .section-3 .section-3-content {
   display: flex;
-  gap: 100px;
+  gap: 50px;
   justify-content: center;
   /* align-items: center; */
   padding: 50px;
@@ -404,7 +404,9 @@ header nav a {
 }
 
 .section-4 .section-4-content .leaderboard-top-1-to-11 {
-  gap: 100px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 .section-4 .section-4-content .leaderboard-top-4-to-7,
 .section-4 .section-4-content .leaderboard-top-8-to-11 {
@@ -415,6 +417,7 @@ header nav a {
 .section-4 .section-4-content .leaderboard-top-4-to-7 .top-user,
 .section-4 .section-4-content .leaderboard-top-8-to-11 .top-user {
   gap: 15px;
+
 }
 
 .section-4 .section-4-content .leaderboard-top-4-to-7 .user-information,
@@ -422,6 +425,7 @@ header nav a {
   gap: 75px;
   padding: 5px 15px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  
 }
 
 /* WELCOME PAGE SECTION FIVE(5)*/
@@ -515,6 +519,7 @@ header nav a {
 
 /* WELCOME PAGE FOOTER */
 footer .footer-content {
+ 
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -577,80 +582,6 @@ footer .footer-content .main-footer .copyright .logo {
   font-size: 22px;
 }
 
-@media screen and (max-width: 1350px) {
-  section,
-  footer {
-    padding: 0px 100px;
-  }
-
-  .section-2 .section-2-content,
-  .section-3 .section-3-content,
-  .section-4 .section-4-content {
-    padding: 50px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  section,
-  footer {
-    padding: 0px 50px;
-  }
-
-  .section-2 .section-2-content,
-  .section-3 .section-3-content,
-  .section-4 .section-4-content {
-    padding: 25px;
-  }
-}
-
-@media screen and (max-width: 946px) {
-  .section-4 .section-4-content .leaderboard-top-1-to-11 {
-    gap: 50px;
-    justify-content: center;
-  }
-}
-
-@media screen and (max-width: 875px) {
-  section,
-  footer {
-    padding: 0px 25px;
-  }
-
-  .section-2 .section-2-content,
-  .section-3 .section-3-content {
-    padding: 16px;
-  }
-
-  .section-1 .section-1-content h1,
-  .section-2 .section-2-content h1,
-  .section-3 .section-3-content h1,
-  .section-4 .section-4-content h1,
-  .section-5 .section-5-content h1 {
-    font-size: 12px;
-  }
-
-  .section-2 p,
-  .section-3 p {
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  .section-2 .section-2-content .left-side {
-    width: 100%;
-  }
-
-  .section-2 .section-2-content,
-  .section-3 .section-3-content {
-    width: 100%;
-  }
-
-  .section-2-content img,
-  .section-3-content img {
-    width: 100%;
-  }
-}
-
 @media screen and (max-width: 1400px) {
   header .main-navbar {
     display: none;
@@ -664,34 +595,34 @@ footer .footer-content .main-footer .copyright .logo {
   }
 
   .navbar-modal.visible {
-    display: flex;
-    gap: 50px;
-    flex-direction: column;
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
 
-    padding: 25px 50px;
+  padding: 25px 50px;
 
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
 
-    width: 400px;
-    background: var(--support-color-2);
-    z-index: 100;
-  }
+  width: 400px;
+  background: var(--support-color-2);
+  z-index: 100;
+}
 
-  .navbar-overlay.visible {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+.navbar-overlay.visible {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
-    background: var(--support-color-2);
-    filter: blur(150px);
-    z-index: 5;
-  }
+  background: var(--support-color-2);
+  filter: blur(150px);
+  z-index: 5;
+}
 
   .navbar-modal .logo {
     font-size: 50px;
@@ -704,8 +635,8 @@ footer .footer-content .main-footer .copyright .logo {
     flex-direction: column;
   }
 
-  .navbar-modal .main-navbar a {
-    color: var(--support-color-1);
+  .navbar-modal .main-navbar a{
+    color: var(--support-color-1); 
     width: fit-content;
   }
 
@@ -717,19 +648,19 @@ footer .footer-content .main-footer .copyright .logo {
     display: flex;
     gap: 50px;
     flex-direction: column;
-
+  
     padding: 25px 50px;
-
+  
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
-
+  
     width: 400px;
     background: var(--support-color-2);
     z-index: 100;
   }
-
+  
   .navbar-overlay.visible {
     display: flex;
     position: fixed;
@@ -737,7 +668,7 @@ footer .footer-content .main-footer .copyright .logo {
     left: 0;
     right: 0;
     bottom: 0;
-
+  
     background: var(--support-color-2);
     filter: blur(150px);
     z-index: 5;
@@ -757,19 +688,20 @@ footer .footer-content .main-footer .copyright .logo {
 
   .section-3 .section-3-content {
     flex-direction: column-reverse;
-    align-items: center;
+    align-items: center
   }
 
   .section-5 .section-5-content .video-gameplay-and-game-info-button {
     flex-direction: column;
   }
+  
 }
 
 @media screen and (max-width: 1100px) {
   header {
     padding: 25px 25px;
   }
-
+  
   header .logo {
     font-size: 24px;
   }
@@ -789,13 +721,13 @@ footer .footer-content .main-footer .copyright .logo {
   }
 
   .play-now-button,
-  .play-free {
+  .play-free
+   {
     padding: 8px 16px;
     font-size: 12px;
   }
-
-  .account-setup-buttons .signup a,
-  .account-setup-buttons .login a {
+  
+  .account-setup-buttons .signup a, .account-setup-buttons .login a {
     font-size: 10px;
   }
 
@@ -839,31 +771,33 @@ footer .footer-content .main-footer .copyright .logo {
   .section-5 .section-5-content {
     padding: 25px;
   }
+
 }
 
 @media screen and (max-width: 600px) {
   section,
   footer {
     padding: 5px;
-  }
+  }  
 
   footer .footer-content .logo {
     font-size: 70px;
-  }
+}
 }
 
 @media screen and (max-width: 565px) {
   .section-2 .section-2-content .left-side,
   .section-3 .section-3-content .right-side,
   .section-2 .section-2-content img,
-  .section-3 .section-3-content img {
+  .section-3 .section-3-content img  {
     width: 460px;
   }
 
+  
   .section-5 .section-5-content .video-gameplay-and-game-info-button .video {
     width: 430px;
   }
-
+ 
   .section-5 .section-5-content .video-gameplay-and-game-info-button video {
     width: 430px;
   }
@@ -873,7 +807,8 @@ footer .footer-content .main-footer .copyright .logo {
   .section-2 .section-2-content .left-side,
   .section-3 .section-3-content .right-side,
   .section-2 .section-2-content img,
-  .section-3 .section-3-content img {
+  .section-3 .section-3-content img  {
     width: 420px;
   }
+
 }
