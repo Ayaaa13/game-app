@@ -18,6 +18,7 @@ const yesBtn = document.querySelector(".yes-button");
 let score = 0;
 let highscore = 5;
 let timerInterval;
+let first, second; // declare first and second outside of the StartGame function
 
 scoreNumber.innerHTML = score;
 highscoreNumber.innerHTML = highscore;
@@ -28,7 +29,7 @@ function AnswerIsTrue() {
 
   answer.value = "";
   if (score > highscore) {
-    highscore.innerHTML = score;
+    highscore = score; // update the highscore variable
     highscoreNumber.innerHTML = score;
   }
 }
@@ -36,7 +37,9 @@ function AnswerIsTrue() {
 function WrongAnswer() {
   body.classList.add("wrong");
   body.classList.remove("correct");
+  const wrong = new Audio('/mp3/wrong.mp3');
 
+  wrong.play();
   setTimeout(function () {
     body.classList.remove("wrong");
   }, 100);
@@ -45,7 +48,9 @@ function WrongAnswer() {
 function CorrectAnswer() {
   body.classList.add("correct");
   body.classList.remove("wrong");
+  const correct = new Audio('/mp3/correct.mp3');
 
+  correct.play();
   setTimeout(function () {
     body.classList.remove("correct");
   }, 100);
@@ -62,6 +67,7 @@ function GameTimer() {
       timerInterval = setTimeout(tick, 1000);
     } else {
       Timer.innerHTML = String("TIME IS UP");
+      QuitGame();
     }
   }
   tick();
@@ -69,16 +75,16 @@ function GameTimer() {
 
 function StartGame() {
   // RANDOM NUMBER
-  let first = parseFloat(Math.floor(Math.random() * 10) + 1);
-  let second = parseFloat(Math.floor(Math.random() * 10) + 1);
+  first = parseFloat(Math.floor(Math.random() * 10) + 1);
+  second = parseFloat(Math.floor(Math.random() * 10) + 1);
 
   // ANSWER
   let equals = first / second;
   let finalEquals = equals.toFixed(2);
-  console.log(finalEquals);
+
   firstNumber.innerHTML = first;
   secondNumber.innerHTML = second;
-  AnswerGame(finalEquals);
+  // AnswerGame(finalEquals);
 }
 
 startBtn.addEventListener("click", function () {
@@ -132,17 +138,18 @@ noBtn.addEventListener("click", function () {
 });
 
 function AnswerGame(finalEquals) {
-  answerBtn.addEventListener("click", function () {
-    let userAnswer = Number(answer.value);
+  let userAnswer = Number(answer.value);
 
-    myAnswer.innerHTML = userAnswer;
-
-    if (userAnswer === parseFloat(finalEquals)) {
-      AnswerIsTrue();
-      CorrectAnswer();
-      StartGame();
-    } else {
-      WrongAnswer();
-    }
-  });
+  myAnswer.innerHTML = userAnswer;
+  if (userAnswer === parseFloat(finalEquals)) {
+    AnswerIsTrue();
+    CorrectAnswer();
+    StartGame();
+  } else {
+    WrongAnswer();
+  }
 }
+
+answerBtn.addEventListener("click", function () {
+  AnswerGame((first / second).toFixed(2));
+});

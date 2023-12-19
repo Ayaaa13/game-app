@@ -57,7 +57,7 @@ function CorrectAnswer() {
 }
 
 function GameTimer() {
-  let time = 120;
+  let time = 5;
   function tick() {
     time--;
 
@@ -67,6 +67,7 @@ function GameTimer() {
       timerInterval = setTimeout(tick, 1000);
     } else {
       Timer.innerHTML = String("TIME IS UP");
+      QuitGame();
     }
   }
   tick();
