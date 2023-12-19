@@ -714,7 +714,7 @@ footer .footer-content .main-footer .copyright .logo {
   .section-3 .section-3-content,
   .section-4 .section-4-content,
   .section-5 .section-5-content {
-    padding: 50px;
+    padding: 40px;
   }
   .section-1 .logo {
     font-size: 60px;
@@ -743,7 +743,7 @@ footer .footer-content .main-footer .copyright .logo {
   }
 
   .section-2 .section-2-content h1 {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .section-2 .section-2-content p {
@@ -811,12 +811,23 @@ footer .footer-content .main-footer .copyright .logo {
     width: 420px;
   }
 
+  .section-2 .section-2-content,
+  .section-3 .section-3-content,
+  .section-4 .section-4-content,
+  .section-5 .section-5-content {
+    padding: 25px;
+  }
+
+  .section-4 .section-4-content .leaderboard-top-1-to-3 {
+    gap: 25px;
+  }
   
 }
 @media screen and (max-width: 450px) {
   header {
     display: flex;
   }
+
   .section-2 .section-2-content .left-side,
   .section-3 .section-3-content .right-side,
   .section-2 .section-2-content img,
@@ -830,5 +841,12 @@ footer .footer-content .main-footer .copyright .logo {
  
   .section-5 .section-5-content .video-gameplay-and-game-info-button video {
     width: 340px;
+  }
+
+  .section-2 .section-2-content,
+  .section-3 .section-3-content,
+  .section-4 .section-4-content,
+  .section-5 .section-5-content {
+    padding: 15px;
   }
 }
