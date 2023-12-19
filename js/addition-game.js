@@ -22,6 +22,7 @@ let timerInterval;
 scoreNumber.innerHTML = score;
 highscoreNumber.innerHTML = highscore;
 
+
 function AnswerIsTrue() {
   score++;
   scoreNumber.innerHTML = score;
@@ -36,7 +37,9 @@ function AnswerIsTrue() {
 function WrongAnswer() {
   body.classList.add("wrong");
   body.classList.remove("correct");
+  const wrong = new Audio('/mp3/wrong.mp3');
 
+  wrong.play();
   setTimeout(function () {
     body.classList.remove("wrong");
   }, 100);
@@ -45,7 +48,9 @@ function WrongAnswer() {
 function CorrectAnswer() {
   body.classList.add("correct");
   body.classList.remove("wrong");
+  const correct = new Audio('/mp3/correct.mp3');
 
+  correct.play();
   setTimeout(function () {
     body.classList.remove("correct");
   }, 100);
@@ -78,7 +83,7 @@ function StartGame() {
   firstNumber.innerHTML = first;
   secondNumber.innerHTML = second;
 
-  AnswerGame(equals);
+  // AnswerGame(equals);
 }
 
 startBtn.addEventListener("click", function () {
@@ -132,16 +137,21 @@ noBtn.addEventListener("click", function () {
 });
 
 function AnswerGame(equals) {
-  answerBtn.addEventListener("click", function () {
-    let userAnswer = Number(answer.value);
+  let userAnswer = Number(answer.value);
 
-    myAnswer.innerHTML = userAnswer;
-    if (userAnswer === equals) {
-      AnswerIsTrue();
-      CorrectAnswer();
-      StartGame();
-    } else {
-      WrongAnswer();
-    }
-  });
+  myAnswer.innerHTML = userAnswer;
+  if (userAnswer === equals) {
+    AnswerIsTrue();
+    CorrectAnswer();
+    StartGame();
+  } else {
+    WrongAnswer();
+  }
 }
+
+answerBtn.addEventListener("click", function () {
+  AnswerGame(first + second);
+})
+  
+
+  
