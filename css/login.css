@@ -226,12 +226,17 @@
   .login-content .right-side {
     padding-left: 0%;
     justify-content: center;
-    width: ;
   }
+
+  
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 500px) {
   .login-content .right-side .right-side-content {
-    width: 400px;
+    width: 380px;
+  }
+
+  .login-content .right-side .login-form {
+    width: 380px;
   }
 }
