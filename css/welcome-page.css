@@ -177,7 +177,7 @@ header nav a {
 
 .account-setup-buttons .signup a,
 .account-setup-buttons .login a {
-  width: 200px;
+  width: 150px;
   padding: 12px 24px;
 }
 
@@ -772,6 +772,9 @@ footer .footer-content .main-footer .copyright .logo {
     padding: 25px;
   }
 
+  .account-setup {
+    width: 420px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -783,6 +786,7 @@ footer .footer-content .main-footer .copyright .logo {
   footer .footer-content .logo {
     font-size: 70px;
 }
+
 }
 
 @media screen and (max-width: 565px) {

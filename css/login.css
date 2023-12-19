@@ -59,11 +59,14 @@
 }
 
 .login-content .right-side {
-  width: 70%;
+  /* width: 70%; */
 
   display: flex;
   justify-content: center;
+  /* align-items: center; */
   padding-top: 150px;
+  padding-left: 20%;
+  
 }
 
 .login-content .right-side .right-side-content {
@@ -218,5 +221,17 @@
   .welcome p,
   .dont-have-account span {
     color: var(--support-color-2);
+  }
+
+  .login-content .right-side {
+    padding-left: 0%;
+    justify-content: center;
+    width: ;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .login-content .right-side .right-side-content {
+    width: 400px;
   }
 }
