@@ -76,7 +76,7 @@ function GameTimer() {
 
 function StartGame() {
   // RANDOM NUMBER
-  first = Number(Math.floor(Math.random() * 25));
+  first = Number(Math.floor(Math.random() * 25) + 10);
   second = Number(Math.floor(Math.random() * 25));
 
   // ANSWER
