@@ -283,6 +283,11 @@ body.correct {
   color: green;
 }
 
+.answer:disabled {
+  background-color: #eee; /* Change the background color to visually indicate it's disabled */
+  color: #888; /* Change the text color to make it less prominent */
+}
+
 @media screen and (max-width: 1039px) {
   .game-content {
     padding: 5px 50px;

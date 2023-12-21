@@ -4,33 +4,10 @@ const passwordAccount = document.querySelector("#password");
 const errorusername = document.querySelector(".error-username");
 const errorpassword = document.querySelector(".error-password");
 
-const userData = [
-  { username: "user1", password: "pass1" },
-  { username: "user2", password: "pass2" },
-  // Add more user data as needed
-];
-
-const usernameError = () => {
-  usernameAccount.classList.add("wrong");
-};
-
-const passwordError = () => {
-  passwordAccount.classList.add("wrong");
-};
-
-const usernameCorrect = () => {
-  usernameAccount.classList.add("correct");
-};
-
-const passwordCorrect = () => {
-  passwordAccount.classList.add("correct");
-};
-
 const Login = () => {
   const loginBtn = document.querySelector(".form-loginBtn");
-  const usernameAccount = document.querySelector(".login-form #username");
+  const usernameBackground= document.querySelector(".login-form .username");
   const passwordBackground = document.querySelector(".password");
-  const passwordAccount = document.querySelector("#password");
   // const errorusername = document.querySelector(".error-username");
   // const errorpassword = document.querySelector(".error-password");
 
@@ -41,8 +18,8 @@ const Login = () => {
   ];
 
   const usernameError = () => {
-    usernameAccount.classList.add("wrong");
-    usernameAccount.classList.remove("correct");
+    usernameBackground.classList.add("wrong");
+    usernameBackground.classList.remove("correct");
   };
 
   const passwordError = () => {
@@ -51,8 +28,8 @@ const Login = () => {
   };
 
   const usernameCorrect = () => {
-    usernameAccount.classList.add("correct");
-    usernameAccount.classList.remove("wrong");
+    usernameBackground.classList.add("correct");
+    usernameBackground.classList.remove("wrong");
   };
 
   const passwordCorrect = () => {

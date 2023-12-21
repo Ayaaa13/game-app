@@ -22,6 +22,7 @@ let timerInterval;
 scoreNumber.innerHTML = score;
 highscoreNumber.innerHTML = highscore;
 
+answer.disabled = true;
 
 function AnswerIsTrue() {
   score++;
@@ -84,6 +85,7 @@ function StartGame() {
   firstNumber.innerHTML = first;
   secondNumber.innerHTML = second;
 
+  answer.disabled = false;
   // AnswerGame(equals);
 }
 
@@ -112,6 +114,8 @@ function QuitGame() {
   let secondNumberReset = 0;
   firstNumber.innerHTML = firstNumberReset;
   secondNumber.innerHTML = secondNumberReset;
+
+  answer.disabled = true;
 }
 
 function AddQuitModal() {
@@ -154,5 +158,9 @@ answerBtn.addEventListener("click", function () {
   AnswerGame(first - second);
 })
   
-
+answer.addEventListener("keydown", function(e){
+  if(e.key === "Enter") {
+    AnswerGame(first - second);
+  }
+})
   

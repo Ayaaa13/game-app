@@ -22,6 +22,7 @@ let timerInterval;
 scoreNumber.innerHTML = score;
 highscoreNumber.innerHTML = highscore;
 
+answer.disabled = true;
 
 function AnswerIsTrue() {
   score++;
@@ -57,7 +58,7 @@ function CorrectAnswer() {
 }
 
 function GameTimer() {
-  let time = 5;
+  let time = 120;
   function tick() {
     time--;
 
@@ -68,6 +69,7 @@ function GameTimer() {
     } else {
       Timer.innerHTML = String("TIME IS UP");
       QuitGame();
+      
     }
   }
   tick();
@@ -83,7 +85,8 @@ function StartGame() {
 
   firstNumber.innerHTML = first;
   secondNumber.innerHTML = second;
-
+  
+  answer.disabled = false;
   // AnswerGame(equals);
 }
 
@@ -112,6 +115,8 @@ function QuitGame() {
   let secondNumberReset = 0;
   firstNumber.innerHTML = firstNumberReset;
   secondNumber.innerHTML = secondNumberReset;
+
+  answer.disabled = true;
 }
 
 function AddQuitModal() {
@@ -154,5 +159,9 @@ answerBtn.addEventListener("click", function () {
   AnswerGame(first + second);
 })
   
-
+answer.addEventListener("keydown", function(e){
+  if(e.key === "Enter") {
+    AnswerGame(first + second);
+  }
+})
   
