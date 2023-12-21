@@ -151,7 +151,7 @@
 .password {
   display: flex;
   align-items: center;
-
+  background: var(--support-color-2);
   border: 1px solid #d9d9d9;
 }
 
