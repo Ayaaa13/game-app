@@ -28,10 +28,11 @@ const passwordCorrect = () => {
 
 const Login = () => {
   const loginBtn = document.querySelector(".form-loginBtn");
-  const usernameAccount = document.querySelector("#username");
+  const usernameAccount = document.querySelector(".login-form #username");
+  const passwordBackground = document.querySelector(".password");
   const passwordAccount = document.querySelector("#password");
-  const errorusername = document.querySelector(".error-username");
-  const errorpassword = document.querySelector(".error-password");
+  // const errorusername = document.querySelector(".error-username");
+  // const errorpassword = document.querySelector(".error-password");
 
   const userData = [
     { username: "user1", password: "pass1" },
@@ -45,8 +46,8 @@ const Login = () => {
   };
 
   const passwordError = () => {
-    passwordAccount.classList.add("wrong");
-    passwordAccount.classList.remove("correct");
+    passwordBackground.classList.add("wrong");
+    passwordBackground.classList.remove("correct");
   };
 
   const usernameCorrect = () => {
@@ -55,8 +56,8 @@ const Login = () => {
   };
 
   const passwordCorrect = () => {
-    passwordAccount.classList.add("correct");
-    passwordAccount.classList.remove("wrong");
+    passwordBackground.classList.add("correct");
+    passwordBackground.classList.remove("wrong");
   };
 
   loginBtn.addEventListener("click", function (e) {

@@ -122,13 +122,13 @@
   color: red;
 } */
 
-.login-form #username.correct,
-.login-form #password.correct {
+.login-form .username.correct,
+.login-form .password.correct {
   border: 1px solid green;
 }
 
-.login-form #username.wrong,
-.login-form #password.wrong {
+.login-form .username.wrong,
+.login-form .password.wrong {
   border: 1px solid red;
 }
 
@@ -148,13 +148,15 @@
   gap: 5px;
 }
 
-.password {
+.password,
+.username {
   display: flex;
   align-items: center;
   background: var(--support-color-2);
-  border: 1px solid #d9d9d9;
+  border: 0px solid #d9d9d9;
 }
 
+.login-form .username input,
 .login-form .password input {
   border: none;
   padding: 8px;
