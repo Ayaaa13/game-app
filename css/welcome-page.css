@@ -246,7 +246,7 @@ header nav a {
 .play-free {
   background: var(--secondary-color);
   font-family: var(--primary-fonts);
-  border: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
   color: #fff;
   padding: 12px 24px;
 
