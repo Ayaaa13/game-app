@@ -80,6 +80,7 @@
   flex-direction: column;
   gap: 10px;
 }
+
 .login-content .right-side .social-media-login .socmed-login {
   display: flex;
   gap: 5px;
@@ -104,7 +105,7 @@
   justify-content: center;
 }
 
-.login-content .right-side .login-form input {
+.login-content .right-side .login-form #username {
   padding: 8px;
   outline: none;
   border: 1px solid #d9d9d9;
@@ -145,6 +146,40 @@
   .remember-me {
   display: flex;
   gap: 5px;
+}
+
+.password {
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #d9d9d9;
+}
+
+.login-form .password input {
+  border: none;
+  padding: 8px;
+  outline: none;
+  /* border: 1px solid #d9d9d9; */
+  color: var(--support-color-1);
+  width: 100%;
+}
+
+.password .passwordBtn {
+  width: 16px;
+  cursor: pointer; 
+  margin-right: 8px;
+}
+
+.hide {
+  display: none;
+}
+
+.hide.visible {
+  display: flex;
+}
+
+.view.invisible {
+  display: none;
 }
 
 .login-content .right-side .login-form .remember-me-and-forgot-password {

@@ -89,4 +89,27 @@ const Login = () => {
   });
 };
 
+const view = document.querySelector(".view");
+const hide = document.querySelector(".hide");
+const buttons = document.querySelectorAll(".password img")
+
+buttons.forEach((button) => {
+  button.addEventListener("click", function(e){
+    let buttonValue = e.target.dataset.value;
+    let passwordInput = document.getElementById("password");
+
+    if (buttonValue === "view") {
+      passwordInput.type = passwordInput.type === "password" && "text";
+      hide.classList.add("visible");
+      view.classList.add("invisible");
+    } else if (buttonValue == "hide") {
+      passwordInput.type = passwordInput.type === "text" && "password";
+      hide.classList.remove("visible");
+      view.classList.remove("invisible");
+    }
+    
+  })
+})
+
+
 Login();
